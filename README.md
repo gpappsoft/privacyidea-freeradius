@@ -1,4 +1,4 @@
-[![Docker](https://github.com/gpappsoft/privacyidea-radius/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/gpappsoft/privacyidea-radius/actions/workflows/docker-publish.yml)
+[![Docker](https://github.com/gpappsoft/privacyidea-freeradius/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/gpappsoft/privacyidea-freeradius/actions/workflows/docker-publish.yml)
 
 # privacyIDEA-freeradius
 
