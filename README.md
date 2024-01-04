@@ -21,7 +21,6 @@ Sample images from this project can be found here:
 | registry | repository |
 |----------|------------|
 | [docker.io](https://hub.docker.com/r/gpappsoft/privacyidea-radius)|```docker pull docker.io/gpappsoft/privacyidea-radius:latest```
-| [ghcr.io](https://github.com/gpappsoft/privacyidea-docker/pkgs/container/privacyidea-radius)| ```docker pull ghcr.io/gpappsoft/privacyidea-radius:latest```|
 
 > [!Note] 
 > ```latest``` tagged image is maybe a privacyidea-freeradius plugin pre- or development-release . Please use always a tag (like ```3.4.2```) 
