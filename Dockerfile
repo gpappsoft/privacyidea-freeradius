@@ -1,7 +1,7 @@
 FROM freeradius/freeradius-server:3.2.3-alpine
 LABEL maintainer="Marco Moenig <marco@moenig.it>"
 
-ARG PLUGIN_VERSION=3.4.2
+ARG PLUGIN_VERSION=3.4.3
 COPY raddb/ /etc/raddb/
 COPY docker-entrypoint.sh /
 
