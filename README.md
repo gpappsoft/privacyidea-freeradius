@@ -23,7 +23,7 @@ Sample images from this project can be found here:
 | [docker.io](https://hub.docker.com/r/gpappsoft/privacyidea-radius)|```docker pull docker.io/gpappsoft/privacyidea-radius:latest```
 
 > [!Note] 
-> ```latest``` tagged image is maybe a privacyidea-freeradius plugin pre- or development-release . Please use always a tag (like ```3.4.2```) 
+> ```latest``` tagged image is maybe a privacyidea-freeradius plugin pre- or development-release . Please use always a tag (like ```3.4.3```) 
 
 ### Prerequisites and requirements
 
@@ -34,17 +34,17 @@ Sample images from this project can be found here:
 
 ##### Docker
 ```
-make build PLUGIN_VERSION=3.4.2
+make build PLUGIN_VERSION=3.4.3
 ```
 ##### Podman
 ```
-make build PLUGIN_VERSION=3.4.2  CONTAINER_ENGINE=podman BUILDER="buildah bud"
+make build PLUGIN_VERSION=3.4.3  CONTAINER_ENGINE=podman BUILDER="buildah bud"
 ```
 
 ## Run image
 
 ```
-docker run --rm -dt -p 1812:1812/tcp -p 1812:1812/udp -p 1813:1813/udp -e PI_HOST=1.2.3.4:8443 privacyidea-freeradius:3.4.2
+docker run --rm -dt -p 1812:1812/tcp -p 1812:1812/udp -p 1813:1813/udp -e PI_HOST=1.2.3.4:8443 privacyidea-freeradius:3.4.3
 ```
 ## Environment Variables
 
@@ -87,7 +87,7 @@ TIMEOUT =
 ```
 #### privacyIDEA-Freeradius plugin version x.x.x is not running, how to fix it?
 
-- Don't know. The image was only testet latest version **3.4.2**
+- Don't know. The image was only testet latest version **3.4.3**
 
 Any feedback are welcome! 
 
