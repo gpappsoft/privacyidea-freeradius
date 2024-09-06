@@ -1,4 +1,4 @@
-PLUGIN_VERSION := 3.4.2
+PLUGIN_VERSION := 3.4.3
 IMAGE_NAME := privacyidea-freeradius:${PLUGIN_VERSION}
 
 BUILDER := docker build
