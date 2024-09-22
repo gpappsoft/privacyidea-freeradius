@@ -3,10 +3,10 @@ LABEL maintainer="Marco Moenig <marco@moenig.it>"
 
 ARG PLUGIN_VERSION=3.4.3
 COPY raddb/ /etc/raddb/
-COPY docker-entrypoint.sh /
+COPY entrypoint.sh /
 
-ADD https://raw.githubusercontent.com/privacyidea/FreeRADIUS/v${PLUGIN_VERSION}/privacyidea_radius.pm /usr/share/privacyidea/freeradius/
-ADD https://raw.githubusercontent.com/privacyidea/FreeRADIUS/v${PLUGIN_VERSION}/dictionary.netknights /etc/raddb/dictionary
+ADD https://raw.githubusercontent.com/privacyidea/FreeRADIUS/refs/tags/v${PLUGIN_VERSION}/privacyidea_radius.pm /usr/share/privacyidea/freeradius/
+ADD https://raw.githubusercontent.com/privacyidea/FreeRADIUS/refs/tags/v${PLUGIN_VERSION}/dictionary.netknights /etc/raddb/dictionary
 
 RUN apk update 
 RUN apk add \
@@ -17,7 +17,8 @@ RUN apk add \
         perl-json \
         perl-lwp-protocol-https \
         perl-yaml-libyaml\
-        perl-module-build
+        perl-module-build \
+        freeradius-utils
         
 RUN perl -MCPAN -e 'install URI::Encode'   
 
@@ -30,5 +31,5 @@ EXPOSE 1812/udp
 EXPOSE 1813/udp
 EXPOSE 1812/tcp
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 CMD [ "radiusd" ]
