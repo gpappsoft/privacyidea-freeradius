@@ -5,7 +5,7 @@ PATH=/opt/sbin:/opt/bin:$PATH
 export PATH
 
 ### modified from original
-sed -i  -e "s|^\(URL =\)|\1 https://${RADIUS_PI_HOST:-127.0.0.1}/validate/check|" \
+sed -i  -e "s|^\(URL =\)|\1 ${RADIUS_PI_HOST:-http://127.0.0.1}/validate/check|" \
         -e "s|^\(REALM =\)|\1 ${RADIUS_PI_REALM}|" \
         -e "s|^\(RESCONF =\)|\1 ${RADIUS_PI_RESCONF}|" \
         -e "s|^\(SSL_CHECK =\)|\1 ${RADIUS_PI_SSLCHECK:-false}|" \

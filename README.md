@@ -50,7 +50,7 @@ docker run --rm -dt -p 1812:1812/tcp -p 1812:1812/udp -p 1813:1813/udp -e PI_HOS
 
 | Variable | Default | Description
 |-----|---------|-------------
-```RADIUS_PI_HOST``` |127.0.0.1| Hostname / IP of the privacyIDEA Server
+```RADIUS_PI_HOST``` |http://127.0.0.1| URL of privacyIDEA Api (with **http://** or **https://**)
 ```RADIUS_PI_REALM```|| Set the default realm
 ```RADIUS_PI_RESCONF``` || Set the default resolver
 ```RADIUS_PI_SSLCHECK```| false | Set to ```true``` to run with ssl check. **root CA certificate import is not yet implemented**
