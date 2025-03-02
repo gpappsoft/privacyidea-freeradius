@@ -68,7 +68,7 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
-            - PLUGIN_VERSION={{ github.ref_name }} 
+            - PLUGIN_VERSION=3.4.3
           
     
       - name: Sign the published Docker image
