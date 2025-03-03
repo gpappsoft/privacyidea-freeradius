@@ -5,12 +5,12 @@ PATH=/opt/sbin:/opt/bin:$PATH
 export PATH
 
 ### modified from original
-sed -i  -e "s|^\(URL =\)|\1 ${RADIUS_PI_HOST:-http://127.0.0.1}/validate/check|" \
-        -e "s|^\(REALM =\)|\1 ${RADIUS_PI_REALM}|" \
-        -e "s|^\(RESCONF =\)|\1 ${RADIUS_PI_RESCONF}|" \
-        -e "s|^\(SSL_CHECK =\)|\1 ${RADIUS_PI_SSLCHECK:-false}|" \
-        -e "s|^\(DEBUG =\)|\1 ${RADIUS_DEBUG:-false}|" \
-        -e "s|^\(TIMEOUT =\)|\1 ${RADIUS_PI_TIMEOUT:-10}|" /etc/raddb/rlm_perl.ini
+sed -i  -e "s|^URL =.*$|URL = ${RADIUS_PI_HOST:-http://127.0.0.1}/validate/check|" \
+        -e "s|^REALM =.*$|REALM = ${RADIUS_PI_REALM}|" \
+        -e "s|^RESCONF =.*$|RESCONF = ${RADIUS_PI_RESCONF}|" \
+        -e "s|^SSL_CHECK =.*$|SSL_CHECK = ${RADIUS_PI_SSLCHECK:-false}|" \
+        -e "s|^DEBUG =.*$|DEBUG = ${RADIUS_DEBUG:-false}|" \
+        -e "s|^TIMEOUT =.*$|TIMEOUT = ${RADIUS_PI_TIMEOUT:-10}|" /etc/raddb/rlm_perl.ini
 ### end of modify
 
 # this if will check if the first argument is a flag
